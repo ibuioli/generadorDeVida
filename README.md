@@ -1,6 +1,6 @@
-# generadorDeVida
+# Génidas
 
-Clases simples para Simulación de Vida Digital en Processing
+Proyecto de clases simples y complejas para Simulación Gráfica de Vida Digital en Processing
 
 Processing Versión: 2.2.1
 
