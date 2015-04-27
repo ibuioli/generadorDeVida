@@ -2,7 +2,7 @@
 
 Proyecto de clases simples y complejas para Simulación Gráfica de Vida Digital en Processing
 
-Versión del Proyecto: 0.2
+Versión del Proyecto: 0.4
 
 Processing Versión: 2.2.1
 
@@ -14,3 +14,7 @@ Incluye ejemplos de:
 -Clase genCell
 
 -Clase genCellX (versión extendida de genCell)
+
+-Clase genTej
+
+-Clase genOrg
