@@ -1,19 +1,20 @@
 //*****************//
 //Generador de Vida
-//Ejemplo clase genCellX
+//Ejemplo clase genTej
 //Version de p5: 2.2.1
 //Ignacio Buioli
 //*****************//
 
-genCellX org;
+genTej org;
 
 void setup(){
+  size(600, 400);
   noSmooth();
   
-  org = new genCellX(2); //Número de Núcleos como valor inicial
+  org = new genTej(width, height); //Tamaño del órgano en Pixeles
 }
 
 void draw(){
   background(200);
-  org.generar(4, 10, 70, 360, 60, 20, true);
+  org.generar(5, 5, 90, 0, 0, 0);
 }

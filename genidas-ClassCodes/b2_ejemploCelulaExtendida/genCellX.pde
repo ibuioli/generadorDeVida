@@ -1,6 +1,7 @@
 class genCellX {
   genVida membrana, nucleo;
   ArrayList<genVida> nucleos = new ArrayList<genVida>();
+  float[] xs, ys;
 
   int cel, tam, p, cant, x, y;
   color ch, cs, cb;
@@ -14,6 +15,14 @@ class genCellX {
 
     for (int i=0; i < cant; i++) {
       nucleos.add(new genVida());
+    }
+    
+    xs = new float[cant];
+    ys = new float[cant];
+    
+    for (int i=0; i < cant; i++) {
+      xs[i] = random(-1, 1);
+      ys[i] = random(-1, 1);
     }
   }
 
@@ -32,11 +41,13 @@ class genCellX {
       pushMatrix();
       if (ani) {
         translate(tam*cel/2+random(-random(tam*cel/4,tam*cel/2),random(tam*cel/4,tam*cel/2)), tam*cel/2+random(-random(tam*cel/4,tam*cel/2),random(tam*cel/4,tam*cel/2)));
-      } else {
-        translate(tam*cel/2, tam*cel/2);
+        translate(xs[i]*(tam*cel)/2, ys[i]*(tam*cel)/2);  
+    } else {
+        translate((tam*cel)/2, (tam*cel)/2);
+        translate(xs[i]*(tam*cel)/2, ys[i]*(tam*cel)/2);
       }
       genVida nucleo = nucleos.get(i);
-      nucleo.generar(cel, tam, p, ch+i*2, cs, cb+i*5);
+      nucleo.generar(cel, tam, p, ch+i*2, cs, cb+i*2);
       popMatrix();
     }
   }
